@@ -46,3 +46,103 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* Greybox Styles*/
+
+body {
+    font-size: 16px;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+.container, header, section, form, label {
+    border: 1px solid grey;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+h1, h2, section, footer {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 3em;
+}
+
+h2, section, p {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2, section {
+    padding-top: 2em;
+}
+
+section {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10em;
+    height: 50vh;
+}
+
+button {
+    padding: 15px 30px;
+    background-color: gray;
+    border: 0;
+}
+
+button:hover {
+    border: 0;
+    background-color: black;
+    color: white;
+}
+
+button:active {
+    background-color: black;
+    color: white;
+}
+
+form {
+    width: 60%;
+    display: flex;
+    flex-flow: column;
+}
+
+input[type="radio"] {
+    position: fixed;
+    opacity: 0;
+}
+
+label {
+    padding: 1em;
+}
+
+label:hover {
+    background-color: gray;
+}
+
+input[type="radio"]:checked + label {
+    border: 1px solid black;
+    background-color: gray;
+}
+
+footer {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    padding: 2em;
+    background-color: gray;
+    color: white;
+}
