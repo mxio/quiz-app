@@ -53,31 +53,33 @@ body {
     font-size: 16px;
 }
 
-.container {
-    width: 100%;
-    margin: auto;
+header, section, footer, div {
+    display: flex;
 }
 
-.container, header, section, form, label {
+header, section, form, label {
     border: 1px solid grey;
     box-sizing: border-box;
 }
 
 header {
-    display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
     height: 50vh;
 }
 
-h1, h2, section, footer {
+h1, h2, section, div, footer {
     box-sizing: border-box;
 }
 
 h1 {
     font-family: 'Major Mono Display', monospace;
     font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
 }
 
 h2, section, p {
@@ -89,7 +91,6 @@ h2, section {
 }
 
 section {
-    display: flex;
     flex-flow: row;
     justify-content: center;
     align-items: center;
@@ -138,8 +139,18 @@ input[type="radio"]:checked + label {
     background-color: gray;
 }
 
+div {
+    width: 60%;
+    flex-flow: column;
+    text-align: center;
+}
+
+div h2 {
+    padding: 2em 0;
+    border: 1px solid gray;
+}
+
 footer {
-    display: flex;
     flex-flow: row;
     justify-content: space-around;
     padding: 2em;
