@@ -62,10 +62,12 @@ function correct() {
     const correctString = `<div><h2>Correct!</h2><button id="next">Next</button></div>`;
 
     $('section form').replaceWith(correctString);
-
+    
     $('#next').click(function() {
         generateQuestionsView();
     });
+
+    correctCount++;
 }
 
 function incorrect() {
@@ -85,7 +87,6 @@ function checkAnswer() {
     for (let j = 0; j <= storeIndex; j++) {
         if ($('input[name=question]:checked', '#question').val() == $(STORE)[storeIndex].answer) {
             correct();
-            correctCount++;
         } 
         else {
            incorrect();
@@ -100,7 +101,15 @@ function generateEndofQuiz() {
 
     const endResultsString = `<section><h2 class="no-padding">You got ${correctCount}/10 correct!</h2></section>`
 
+    const progressEndingString = 
+    `<footer>
+        <p>Question ${i}/10</p>
+        <p>${correctCount}/10 correct</p>
+    </footer>`
+
+
     $('section').replaceWith(endResultsString);
+    $('footer').replaceWith(progressEndingString);
 }
 
 function handleQuiz() {
