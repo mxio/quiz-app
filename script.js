@@ -99,7 +99,13 @@ function checkAnswer() {
 function generateEndofQuiz() {
     console.log('`endResults` ran');
 
-    const endResultsString = `<section><h2 class="no-padding">You got ${correctCount}/10 correct!</h2></section>`
+    const endResultsString = `
+        <section>
+            <div>
+                <h2 class="no-padding">You got ${correctCount}/10 correct!</h2>
+                <button>Try again</button>
+            </div>
+        </section>`
 
     const progressEndingString = 
     `<footer>
@@ -110,14 +116,19 @@ function generateEndofQuiz() {
 
     $('section').replaceWith(endResultsString);
     $('footer').replaceWith(progressEndingString);
+
+    $('button').click(function(event) {
+        i = 0;
+        storeIndex = 0;
+        correctCount = 0;
+        
+        generateQuestionsView();
+    })
 }
 
 function handleQuiz() {
     //handle functions
     startQuiz();
-    progress();
-    amountCorrect();
-    endResults();
 }
 
 $(handleQuiz);
