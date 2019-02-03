@@ -52,7 +52,7 @@ function generateQuestionsView() {
             checkAnswer();
          }
          else {
-             alert('Please select an answer!');
+             $('form').addClass('required');
          }
     })
 }

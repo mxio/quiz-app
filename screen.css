@@ -8,3 +8,8 @@
         padding-top: 30px;
     }
 }
+
+.required {
+    border: 1px solid red;
+    box-shadow: 0 0 2px red;
+}
