@@ -48,12 +48,12 @@ const STORE = [
     },
     {
         id: 6,
-        question: "Where did H.O.T. film the music video for 'Wolf & Sheep?'",
-        option1: 'San Francisco',
-        option2: 'Florida',
-        option3: 'Venice Beach',
-        option4: 'Hawaii',
-        answer: 'Venice Beach'
+        question: 'Which band made their US TV debut at the 2017 American Music Award?',
+        option1: 'Seventeen',
+        option2: 'Bigbang',
+        option3: 'iKON',
+        option4: 'BTS',
+        answer: 'BTS'
     },
     {
         id: 7,
