@@ -67,10 +67,17 @@ header {
     justify-content: center;
     align-items: center;
     height: 50vh;
+    background-image: url(img/maxresdefault.jpg);
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0, .6);
 }
 
 h1, h2, section, div, footer {
     box-sizing: border-box;
+}
+
+header h1, header h2 {
+    color: #fff;
 }
 
 h1 {
@@ -96,8 +103,6 @@ section {
     align-items: center;
     padding: 10em;
     height: 50vh;
-    background-image: url(img/maxresdefault.jpg);
-    background-size: cover;
 }
 
 button {
@@ -158,6 +163,10 @@ footer {
     padding: 2em;
     background-color: gray;
     color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .hidden {

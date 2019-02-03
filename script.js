@@ -34,11 +34,24 @@ function generateQuestionsView() {
         $('header h2').replaceWith(questionString);
         $('section').children().replaceWith(optionsString);
     }
-    // $('form').on('submit', function(event) {
-    //     event.preventDefault();
-    // })
 
-    $('#submit').click(checkAnswer);
+    const progressString = 
+    `<footer>
+         <p>Question /10</p>
+         <p>${correctCount}/10 correct</p>
+     </footer>`
+
+     $('footer').replaceWith(progressString);
+    
+    $('form').on('submit', function(event) {
+         event.preventDefault();
+         if ($('input:radio').is(':checked')) {
+            checkAnswer();
+         }
+         else {
+             alert('Please select an answer!');
+         }
+    })
 }
 
 function correct() {
@@ -50,12 +63,15 @@ function correct() {
     $('#next').click(function() {
         generateQuestionsView();
     });
+
+    //correctCount++;
 }
 
 function incorrect() {
     console.log('`incorrect` ran');
-    const incorrectString = `<div><h2>Sorry. The right answer is ${STORE[storeIndex].answer}        
-        .</h2><button id="next">Next</button></div>`;
+    const incorrectString = `
+        <div><h2>Sorry. ${STORE[storeIndex].answer} is the right answer.</h2>
+        <button id="next">Next</button></div>`;
 
     $('section form').replaceWith(incorrectString);
 
@@ -67,8 +83,8 @@ function incorrect() {
 function checkAnswer() {
     for (let j = 0; j <= storeIndex; j++) {
         if ($('input[name=question]:checked', '#question').val() == $(STORE)[storeIndex].answer) {
-            correctCount++;
             correct();
+            correctCount++;
         } 
         else {
            incorrect();
