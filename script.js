@@ -6,13 +6,9 @@ function startQuiz() {
     console.log('`startQuiz` ran');
 
     // When start button is clicked, remove background image, replace h2 with question, hide button in section and run function to generate html for questions view
-    $('#start').click(hideStart);
-}
-
-function hideStart() {
-    //$('section button').remove();
-    //$('header h2').remove();
-    generateQuestionsView();
+    $('#start').click(function() {
+        generateQuestionsView();
+    });
 }
 
 function generateQuestionsView() {
