@@ -29,19 +29,22 @@ function generateQuestionsView() {
                 <label for="option-4">${STORE[i].option4}</label>
                 <button type="submit" id="submit">Submit</button>
             </form>`;            
+
+        const progressString = 
+            `<footer>
+                <p>Question ${i+1}/10</p>
+                <p>${correctCount}/10 correct</p>
+            </footer>`
+
+         $('footer').replaceWith(progressString);
         
         
         $('header h2').replaceWith(questionString);
         $('section').children().replaceWith(optionsString);
+    } 
+    else {
+        generateEndofQuiz();
     }
-
-    const progressString = 
-    `<footer>
-         <p>Question /10</p>
-         <p>${correctCount}/10 correct</p>
-     </footer>`
-
-     $('footer').replaceWith(progressString);
     
     $('form').on('submit', function(event) {
          event.preventDefault();
@@ -63,8 +66,6 @@ function correct() {
     $('#next').click(function() {
         generateQuestionsView();
     });
-
-    //correctCount++;
 }
 
 function incorrect() {
@@ -94,17 +95,12 @@ function checkAnswer() {
     storeIndex++;
 }
 
-
-function progress() {
-    console.log('`progress` ran');
-}
-
-function amountCorrect() {
-    console.log('`amountCorrect` ran');
-}
-
-function endResults() {
+function generateEndofQuiz() {
     console.log('`endResults` ran');
+
+    const endResultsString = `<section><h2 class="no-padding">You got ${correctCount}/10 correct!</h2></section>`
+
+    $('section').replaceWith(endResultsString);
 }
 
 function handleQuiz() {

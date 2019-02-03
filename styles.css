@@ -172,3 +172,7 @@ footer {
 .hidden {
     display: none;
 }
+
+.no-padding {
+    padding-top: 0;
+}
