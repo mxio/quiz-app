@@ -84,14 +84,13 @@ function incorrect() {
 }
 
 function checkAnswer() {
-    for (let j = 0; j <= storeIndex; j++) {
-        if ($('input[name=question]:checked', '#question').val() == $(STORE)[storeIndex].answer) {
-            correct();
-        } 
-        else {
-           incorrect();
-        }
+    if ($('input[name=question]:checked', '#question').val() == $(STORE)[storeIndex].answer) {
+        correct();
+    } 
+    else {
+       incorrect();
     }
+
     i++;
     storeIndex++;
 }
