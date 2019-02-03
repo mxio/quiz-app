@@ -96,6 +96,8 @@ section {
     align-items: center;
     padding: 10em;
     height: 50vh;
+    background-image: url(img/maxresdefault.jpg);
+    background-size: cover;
 }
 
 button {
@@ -156,4 +158,8 @@ footer {
     padding: 2em;
     background-color: gray;
     color: white;
+}
+
+.hidden {
+    display: none;
 }
