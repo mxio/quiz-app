@@ -67,20 +67,20 @@ const STORE = [
     {
         id: 8,
         question: 'Which rapper was banned from entering South Korea?',
-        option1: 'Yoo Seung Jun',
+        option1: 'Yoo Seung-jun',
         option2: 'Jay Park',
         option3: 'Tablo',
         option4: 'MC Sniper',
-        answer: 'Yoo Seung Jun'
+        answer: 'Yoo Seung-jun'
     },
     {
         id: 9,
         question: 'Which K-pop music video was the first to reach 1 million views on Youtube?',
-        option1: 'Bae Bae',
-        option2: 'Gee',
-        option3: 'Gangnam Style',
-        option4: 'DNA',
-        answer: 'Gangnam Style'
+        option1: 'BIGBANG - Bae Bae',
+        option2: "Girls' Generation - Gee",
+        option3: 'PSY - Gangnam Style',
+        option4: 'BTS- DNA',
+        answer: 'PSY - Gangnam Style'
     },
     {
         id: 10,
